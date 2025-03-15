@@ -6,59 +6,33 @@
     <title>Formulario de contacto</title>
 </head>
 <body>
-    <header>
-        <!-- Aquí puedes agregar contenido para el encabezado si es necesario -->
-    </header>
-
-    <main>
-        <!-- Formulario de contacto -->
-        <div class="contact_form">
-            <div class="formulario">
-                <h1>Formulario de contacto</h1>
-                <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
-
-                <form action="submeter-formulario.php" method="post">
-                    <p>
-                        <label for="nombre" class="colocar_nombre">Nombre
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_nombre" id="nombre" required placeholder="Escribe tu nombre">
-                    </p>
-
-                    <p>
-                        <label for="email" class="colocar_email">Email
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="email" name="introducir_email" id="email" required placeholder="Escribe tu Email">
-                    </p>
-
-                    <p>
-                        <label for="telefono" class="colocar_telefono">Teléfono</label>
-                        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                    </p>
-
-                    <p>
-                        <label for="asunto" class="colocar_asunto">Asunto
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <input type="text" name="introducir_asunto" id="asunto" required placeholder="Escribe un asunto">
-                    </p>
-
-                    <p>
-                        <label for="mensaje" class="colocar_mensaje">Mensaje
-                            <span class="obligatorio">*</span>
-                        </label>
-                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required placeholder="Deja aquí tu comentario..."></textarea>
-                    </p>
-
-                    <button type="submit" name="enviar_formulario" id="enviar">Enviar</button>
-
-                    <p class="aviso">
-                        <span class="obligatorio">*</span> Los campos son obligatorios.
-                    </p>
-                </form>
-            </div>
-        </div>
+    <header> </header>
+    <form action="/SENA/datos_usuario" method="post">
+        <p><tt>¿TIENES DUDAS, COMENTARIOS O DESEAS INFORMACIÓN? CONTÁCTANOS AQUÍ</tt></p>
+        <label for="nombre">Nombre:</label>
+        <br>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="correo">Correo:</label>
+        <br>
+        <input type="email" id="correo" name="correo" required>
+        <br>
+        <label for="mensaje">Mensaje:</label>
+        <br>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+        <br><br>
+        <label for="categoria">Categorias:</label>
+        <br>
+        <select name="categoria" id="categoria">
+            <option value="general">General</option>
+            <option value="Soporte">Soporte Tecnico</option>
+            <option value="Ventas">Ventas</option>
+            <option value="Reclamos">Reclamos</option>
+            <option value="otros">Otros</option>
+        </select>
+        <br><br><br>
+        <button type="submit">Enviar</button>
+    </form>
     </main>
 </body>
 </html>
